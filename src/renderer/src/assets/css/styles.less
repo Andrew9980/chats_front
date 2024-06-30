@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #app {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+body, #app {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  width: 100%;
+  height: 60px;
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* 确保 header 位于其他内容之上 */
+  flex-shrink: 0; /* 防止 header 收缩 */
+}
+
+.container {
+  display: flex;
+  flex-direction: row; /* 水平方向排列子元素 */
+  width: 100%;
+  height: calc(100% - 60px); /* 减去 header 的高度 */
+  //background-color: #f4f4f4;
+  flex: 1; /* 使 container 填充剩余空间 */
+}
+
+.left, .right {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: #ddd;
+}
+
+.left {
+  background-color: red;
+  flex: 0 0 30%; /* 固定左侧部分宽度为30% */
+}
+
+.right {
+  background-color: yellow;
+  flex: 0 0 70%; /* 固定右侧部分宽度为70% */
+}

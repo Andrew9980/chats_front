@@ -1,22 +1,28 @@
 <script>
+import avatar from '@/assets/qq.webp';
+
 export default {
   name: "Header",
   data() {
     return {
+      avatar,
       searchValue: ''
     }
   },
   methods: {
-    onSearch() {
-      console.log("搜索查询")
-    }
   }
 };
 </script>
 
 <template>
+  <div class="avatar">
+    <n-avatar
+      size="small"
+      :src="avatar"
+    />
+  </div>
   <div class="headerLeft">
-    <n-input placeholder="搜索" autosize style="min-width: 70%" />
+    <n-input round placeholder="中" />
   </div>
   <div class="headerRight">
     <n-flex justify="center">
@@ -28,9 +34,17 @@ export default {
 </template>
 
 <style scoped lang="less">
+.avatar {
+  display: flex;
+  width: 10%;
+  height: 100%;
+  justify-content: left;
+  align-items: center;
+  padding: 3%;
+}
 .headerLeft {
   display: flex;
-  width: 40%;
+  width: 30%;
   height: 100%;
   justify-content: center;
   align-items: center;

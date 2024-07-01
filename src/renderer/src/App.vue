@@ -1,9 +1,11 @@
 <script>
 import Header from "./components/Header.vue";
+import ChatList from "./components/ChatList.vue";
 
 export default {
   name: "app",
   components: {
+    ChatList,
     Header
   }
 };
@@ -15,7 +17,7 @@ export default {
   </div>
   <div class="container">
     <div class="left">
-      我是左边
+      <ChatList/>
     </div>
     <div class="right">
       我是右边

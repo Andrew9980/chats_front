@@ -15,14 +15,16 @@ export default {
 </script>
 
 <template>
-  <div class="avatar">
-    <n-avatar
-      size="small"
-      :src="avatar"
-    />
-  </div>
   <div class="headerLeft">
-    <n-input round placeholder="中" />
+    <div class="avatar">
+      <n-avatar
+        size="large"
+        :src="avatar"
+      />
+    </div>
+    <div class="search">
+      <n-input round placeholder="搜索" size="small" />
+    </div>
   </div>
   <div class="headerRight">
     <n-flex justify="center">
@@ -34,22 +36,17 @@ export default {
 </template>
 
 <style scoped lang="less">
-.avatar {
-  display: flex;
-  width: 10%;
-  height: 100%;
-  justify-content: left;
-  align-items: center;
-  padding: 3%;
-}
 .headerLeft {
   display: flex;
-  width: 30%;
+  width:30%;
   height: 100%;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
-
+.avatar {
+  padding-left: 3%;
+  padding-top: 2%;
+}
 .headerRight {
   display: flex;
   width: 60%;

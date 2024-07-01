@@ -27,16 +27,16 @@ import { reactive } from 'vue'
 
 const list = reactive([
   { type: 'left', content: '你是谁' },
-  { type: 'right', content: '我是你爹' },
-  { type: 'left', content: '我是你爸爸' },
-  { type: 'right', content: '你是我的儿' },
-  { type: 'right', content: '你是我的儿' },
-  { type: 'right', content: '你是我的儿' },
-  { type: 'right', content: '你是我的儿' },
-  { type: 'right', content: '你是我的儿' },
-  { type: 'right', content: '你是我的儿' },
-  { type: 'right', content: '你是我的儿' },
-  { type: 'left', content: '傻逼洗洗睡吧' }
+  { type: 'right', content: '你是谁' },
+  { type: 'left', content: '你是谁' },
+  { type: 'right', content: '你是谁' },
+  { type: 'right', content: '你是谁' },
+  { type: 'right', content: '你是谁' },
+  { type: 'right', content: '你是谁' },
+  { type: 'right', content: '你是谁' },
+  { type: 'right', content: '你是谁' },
+  { type: 'right', content: '你是谁' },
+  { type: 'left', content: '你是谁' }
 ])
 </script>
 

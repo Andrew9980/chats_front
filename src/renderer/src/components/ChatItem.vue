@@ -1,7 +1,7 @@
 <script>
-import avatar from '@/assets/qq.webp';
-export default  {
-  name: "ChatItem",
+import avatar from '@/assets/qq.webp'
+export default {
+  name: 'ChatItem',
   props: [],
   data() {
     return {
@@ -14,23 +14,14 @@ export default  {
 <template>
   <div class="item">
     <div class="avatar">
-      <n-avatar
-        size="large"
-        :src="avatar"
-      />
+      <n-avatar size="large" :src="avatar" />
     </div>
     <div class="message">
       <div class="title">
-        <div class="name">
-          名称
-        </div>
-        <div class="time">
-          00:00:00
-        </div>
+        <div class="name">名称</div>
+        <div class="time">00:00:00</div>
       </div>
-      <div class="content">
-        消息内容
-      </div>
+      <div class="content">消息内容</div>
     </div>
   </div>
 </template>
@@ -52,7 +43,6 @@ export default  {
 .message {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   width: 200px;
   border: black 1px solid;
 }

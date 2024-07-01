@@ -1,14 +1,7 @@
-<script>
-import Header from "./components/Header.vue";
-import ChatList from "./components/ChatList.vue";
-
-export default {
-  name: "app",
-  components: {
-    ChatList,
-    Header
-  }
-};
+<script setup>
+import Header from './components/Header.vue'
+import ChatList from './components/ChatList.vue'
+import ChatView from './components/ChatView.vue'
 </script>
 
 <template>
@@ -17,10 +10,10 @@ export default {
   </div>
   <div class="container">
     <div class="left">
-      <ChatList/>
+      <ChatList />
     </div>
     <div class="right">
-      我是右边
+      <ChatView />
     </div>
   </div>
 </template>

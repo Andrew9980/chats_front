@@ -40,17 +40,22 @@ body, #app {
 .left, .right {
   display: flex;
   height: 100%;
-  justify-content: center;
-  align-items: center;
+  border: black 1px solid;
   background-color: #ddd;
 }
 
 .left {
   background-color: #ddd;
   flex: 0 0 30%; /* 固定左侧部分宽度为30% */
+  justify-content: left;
+  align-items: start;
+  padding-left: 1%;
+  padding-top: 2%;
 }
 
 .right {
   background-color: #ddd;
   flex: 0 0 70%; /* 固定右侧部分宽度为70% */
+  justify-content: center;
+  align-items: center;
 }

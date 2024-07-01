@@ -1,16 +1,20 @@
 <script>
 import ChatItem from "./ChatItem.vue";
-export default  {
+
+export default {
   name: "ChatList",
   components: { ChatItem }
-}
+};
 </script>
 
 <template>
-  <div class="list">
-  </div>
+  <n-flex vertical align="flex-start">
+    <ChatItem/>
+    <ChatItem/>
+    <ChatItem/>
+    <ChatItem/>
+  </n-flex>
 </template>
 
 <style scoped lang="less">
-
 </style>

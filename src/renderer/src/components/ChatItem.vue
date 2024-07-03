@@ -2,7 +2,7 @@
 import avatar from '@/assets/qq.webp';
 export default  {
   name: "ChatItem",
-  props: [],
+  props: ['data'],
   data() {
     return {
       avatar
@@ -16,20 +16,20 @@ export default  {
     <div class="avatar">
       <n-avatar
         size="large"
-        :src="avatar"
+        :src="data.url"
       />
     </div>
     <div class="message">
       <div class="title">
         <div class="name">
-          名称
+          {{data.username}}
         </div>
         <div class="time" style="color: rgb(128,128,128)">
-          00:00
+          {{data.time}}
         </div>
       </div>
       <div class="content" style="color: rgb(128,128,128)">
-        消息内容
+        {{data.content}}
       </div>
     </div>
   </div>
@@ -40,6 +40,8 @@ export default  {
   display: flex;
   width: 100%;
   height: 100%;
+  background-color: white;
+  border-radius: 10px; // div圆角
 }
 .avatar {
   display: flex;

@@ -1,5 +1,6 @@
 <script>
 import avatar from '@/assets/qq.webp';
+import axios from "axios";
 export default  {
   name: "ChatItem",
   props: ['data'],
@@ -7,12 +8,20 @@ export default  {
     return {
       avatar
     }
+  },
+  methods: {
+    toChat(contactId) {
+      console.log("点击了", contactId);
+      axios.get("http://localhost:8080/chats/test").then(res => {
+        console.log(res)
+      })
+    }
   }
 }
 </script>
 
 <template>
-  <div class="item">
+  <div class="item" @click="toChat(data.contactId)">
     <div class="avatar">
       <n-avatar
         size="large"
@@ -22,7 +31,7 @@ export default  {
     <div class="message">
       <div class="title">
         <div class="name">
-          {{data.username}}
+          {{data.contactName}}
         </div>
         <div class="time" style="color: rgb(128,128,128)">
           {{data.time}}
@@ -41,7 +50,7 @@ export default  {
   width: 100%;
   height: 100%;
   background-color: white;
-  border-radius: 10px; // div圆角
+  border-radius: 5px; // div圆角
 }
 .avatar {
   display: flex;

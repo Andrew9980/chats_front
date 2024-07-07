@@ -14,11 +14,17 @@
       </div>
     </div>
   </div>
-  <!-- 按钮 -->
-  <div class="btn"></div>
+  <!-- 聊天工具栏按钮 -->
+<!--  <div class="btn">-->
+<!--  </div>-->
   <!-- 输入框 -->
   <div class="ipt">
     <n-input v-model:value="value" type="textarea" placeholder="基本的 Textarea" />
+  </div>
+  <div class="sendBtn">
+    <n-button strong secondary type="success">
+      发送
+    </n-button>
   </div>
 </template>
 
@@ -42,7 +48,7 @@ const list = reactive([
 
 <style lang="less" scoped>
 .history {
-  height: 60vh;
+  height: 70vh;
   width: 100%;
   overflow: scroll;
 }
@@ -83,5 +89,10 @@ const list = reactive([
       background-color: darkmagenta;
     }
   }
+}
+.sendBtn {
+  display: flex;
+  justify-content: right;
+  padding-right: 20px;
 }
 </style>

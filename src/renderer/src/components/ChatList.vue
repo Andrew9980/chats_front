@@ -2,6 +2,7 @@
 import avatar from '@/assets/qq.webp';
 import ChatItem from "./ChatItem.vue";
 import moment from "moment";
+import axios from "axios";
 
 export default {
   name: "ChatList",
@@ -11,37 +12,34 @@ export default {
       list: [
         {
           url: avatar,
-          username: 'andrew',
+          contactId: '12381283',
+          contactName: 'andrew',
           time: moment().format("HH:mm:ss"),
           content: '你是谁',
         },
         {
           url: avatar,
-          username: 'andrew',
+          contactId: '281827',
+          contactName: 'tom',
           time: moment().format("HH:mm:ss"),
           content: '你是谁',
         },
         {
           url: avatar,
-          username: 'andrew',
+          contactId: '886712713',
+          contactName: 'jerry',
           time: moment().format("HH:mm:ss"),
           content: '你是谁',
-        },
-        {
-          url: avatar,
-          username: 'andrew',
-          time: moment().format("HH:mm:ss"),
-          content: '你是谁',
-        },
-        {
-          url: avatar,
-          username: 'andrew',
-          time: moment().format("HH:mm:ss"),
-          content: '你是谁',
-        },
+        }
       ]
     }
+  },
+  created() {
+    axios.get("http://localhost:8080/chats/userSessionMessage/list?userId=85472619300").then(res => {
+      console.log(res)
+    })
   }
+
 };
 </script>
 

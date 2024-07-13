@@ -1,27 +1,20 @@
 <script>
+import { eventBus } from "@/main";
 import avatar from '@/assets/qq.webp';
-import axios from "axios";
 export default  {
   name: "ChatItem",
   props: ['data'],
-  data() {
-    return {
-      avatar
+  setup() {
+    const toChat = (data) => {
+      eventBus.value.startChat = data;
     }
+    return {avatar, toChat}
   },
-  methods: {
-    toChat(contactId) {
-      console.log("点击了", contactId);
-      axios.get("http://localhost:8080/chats/test").then(res => {
-        console.log(res)
-      })
-    }
-  }
 }
 </script>
 
 <template>
-  <div class="item" @click="toChat(data.contactId)">
+  <div class="item" @click="toChat(data)">
     <div class="avatar">
       <n-avatar
         size="large"
